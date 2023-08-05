@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import "./Stopwatch.css";
-
 
 const Stopwatch = () => {
   const [disable, setDisable] = useState(true);
@@ -66,9 +64,8 @@ const Stopwatch = () => {
       </p>
       <div className="button_con">
         {visible && (
-          <button data-testid="start" onClick={handleStart}>
-            Start
-          </button>
+          <input type="button" value="Start" data-testid="start" onClick={handleStart}>
+          
         )}
 
         {isRunning && (
