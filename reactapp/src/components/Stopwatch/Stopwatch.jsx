@@ -64,25 +64,21 @@ const Stopwatch = () => {
       </p>
       <div className="button_con">
         {visible && (
-          <input type="button" value="Start" data-testid="start" onClick={handleStart}>
-          
+          <input type="button" value="Start" data-testid="start" onClick={handleStart}/>  
         )}
 
         {isRunning && (
-          <button data-testid="pause" onClick={handlePause}>
-            Pause
-          </button>
+          <input type="button" value="Pause" data-testid="pause" onClick={handlePause}/>
+          
         )}
 
         {!isRunning && time !== 0 && (
-          <button data-testid="resume" onClick={handleResume}>
-            Resume
-          </button>
+          <input type="button" value="Resume" data-testid="resume" onClick={handleResume}/>
+          
         )}
         {
-          <button data-testid="reset" onClick={handleReset} disabled={disable}>
-            Reset
-          </button>
+          <input type="button" value="Reset" data-testid="reset" onClick={handleReset} disabled={disable}/>
+          
         }
       </div>
     </div>
